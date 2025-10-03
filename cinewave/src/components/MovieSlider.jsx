@@ -1,0 +1,107 @@
+import React from "react";
+
+const MovieSlider = () => {
+  return (
+    <section className="py-12 " id="">
+      <div className="container mx-auto px-4">
+        <div className="flex items-baseline justify-between mb-8">
+          <div className="text-2xl md:text-3xl font-bold text-white">
+            <h2>Title</h2>
+            {/* conditional rendering  */}
+            <p className="text-neutral-400 text-sm mt-1">Subtitle</p>
+          </div>
+
+          <div className="flex space-x-2">
+            <button
+              className="p-2 rounded-full bg-neutral-800/70 hover:bg-neutral-700 text-white transition-all"
+              aria-label="Scroll left"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+
+            <button
+              className="p-2 rounded-full bg-neutral-800/70 hover:bg-neutral-700 text-white transition-all"
+              aria-label="Scroll right"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        {/* Movie Slider  */}
+        <div className="relative">
+          <div className="flex space-x-4 overflow-x-hidden scrollbar-hide pb-4 snap-x ">
+            {/* conditional rendering  */}
+            <div className=" min-w-[200px] md:min-w-[]240px] snap-start relative group cursor-pointer ">
+              <div className="rounded-lg overflow-hidden bg-neutral-800 ">
+                <div className="relative aspect-[2/3]">
+                  <img
+                    src=""
+                    alt=""
+                    className="w-full object-over transition-all
+                         duration-300 group-hover:scale-110 group-hover:opacity-35 "
+                  />
+
+                  {/* Hover overlay  */}
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-t from-neutral-900/90 via-neutral-900/40
+                            to-transparent flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100
+                            transition-all duration-300  `}
+                  >
+                    <div
+                      className="transform translate-y-4 group-hover:translate-y-0
+                                transition-transform duration-300 space-y-3 "
+                    >
+                      <div className="flex items-center justify-between ">
+                        <div className="flex items-center space-x-1">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-4 w-4 text-yellow-400 "
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path d="M9.849 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.785.57-1.84-.197-1.54-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z" />
+                          </svg>
+                          <span className="text-yellow-400 text-sm font-medium ">
+                            Movies Vote Average
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default MovieSlider;
