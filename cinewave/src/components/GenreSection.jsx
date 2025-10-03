@@ -30,8 +30,9 @@ const GenreSection = () => {
         {/* Else */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
           {/* Map Method */}
-          <div className="group cursor-pointer">
-            <div className="relative  rounded-lg  overflow-hidden bg-neutral-800 ">
+          <div className="group cursor-pointer flex flex-col">
+            {/* Poster Box */}
+            <div className="relative rounded-lg overflow-hidden bg-neutral-800 ">
               <div className="aspect-[2/3]">
                 {" "}
                 {/* only fixed aspect */}
@@ -86,26 +87,28 @@ const GenreSection = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="mt-3 ">
-            <h3 className="text-white text-sm font-medium truncate">
-              Movie Title
-            </h3>
-            <div className="flex items-center justify-between ">
-              <div className="flex items-center space-x-1 ">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-yellow-400 "
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path d="M9.849 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.785.57-1.84-.197-1.54-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z" />
-                </svg>
-                <span className="text-neutral-400 text-xs ">
-                  Movie Average Rating
-                </span>
+
+            {/* Movie Info Below Poster */}
+            <div className="mt-3 ">
+              <h3 className="text-white text-sm font-medium truncate">
+                Movie Title
+              </h3>
+              <div className="flex items-center justify-between ">
+                <div className="flex items-center space-x-1 ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-4 w-4 text-yellow-400 "
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path d="M9.849 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.785.57-1.84-.197-1.54-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z" />
+                  </svg>
+                  <span className="text-neutral-400 text-xs ">
+                    Movie Average Rating
+                  </span>
+                </div>
+                <span className="text-neutral-500 text-xs ">Movie Release Date</span>
               </div>
-              <span className="text-neutral-500 text-xs ">Movie Release Date</span>
             </div>
           </div>
         </div>
